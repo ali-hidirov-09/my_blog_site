@@ -22,7 +22,7 @@ class Post(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    status = models.CharField(max_length=10,choices=STATUS_CHOICES, default='draft')
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
     class Meta:
         ordering = ('-publish',)
@@ -40,9 +40,5 @@ class Post(models.Model):
                                                  self.slug])
 
 
-posts = Post.objects.filter(status='published')
-p_posts = Post.published.all()
-
-
-
-
+posts = Post.objects.filter(status='published')  # xar safar ishlatib o'tirmaymiz
+p_posts = Post.published.all()                   # o'rniga manabuni ishlatamiz oson unga manager yaratib qo'yamiz, tajribani ko'pligini bildiradi

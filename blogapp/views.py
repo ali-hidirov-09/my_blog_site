@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404, render
-
 from .models import Post
 from django.views.generic import ListView
 
@@ -7,7 +6,7 @@ from django.views.generic import ListView
 class PostListView(ListView):
     queryset = Post.published.all()
     context_object_name = 'posts'
-    paginate_by = 5
+    paginate_by = 5   # bir page da 5 ta maqola bor
     template_name = "blog/post/list.html"
 
 
