@@ -40,5 +40,5 @@ class Post(models.Model):
                                                  self.slug])
 
 
-posts = Post.objects.filter(status='published')  # xar safar ishlatib o'tirmaymiz
-p_posts = Post.published.all()                   # o'rniga manabuni ishlatamiz oson unga manager yaratib qo'yamiz, tajribani ko'pligini bildiradi
+# posts = Post.objects.filter(status='published')  # xar safar ishlatib o'tirmaymiz
+# p_posts = Post.published.all()                   # o'rniga manabuni ishlatamiz oson unga manager yaratib qo'yamiz, tajribani ko'pligini bildiradi
