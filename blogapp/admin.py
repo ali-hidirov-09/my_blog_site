@@ -4,7 +4,7 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'author', 'publish', 'status') # admin panelda nima k'rinishi
+    list_display = ('title', 'slug', 'author', 'publish', 'status') # admin panelda nima ko'rinishi
     list_filter = ('status', 'created', 'publish', 'author')
     search_fields = ('title', 'body')
     prepopulated_fields = {'slug': ('title', )}  # slug qo'yilmasa xam titleda qarab yaratib oladi
